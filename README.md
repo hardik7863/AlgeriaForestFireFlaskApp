@@ -1,35 +1,29 @@
 # AlgeriaForestFireFlaskApp
-Data Set Information:
+**📊 Data Set Information:**
+🔥 The dataset contains 244 instances from two regions of Algeria:
+🌍 Bejaia Region (northeast) and Sidi Bel-Abbes Region (northwest).
+✔️ 122 instances for each region.
+📅 Data collected between June 2012 and September 2012.
+🔢 Includes 11 attributes and 1 output attribute (class).
 
-The dataset includes 244 instances that regroup a data of two regions of Algeria,namely the Bejaia Region located in the northeast of Algeria and the Sidi Bel-abbes region located in the northwest of Algeria
+**✨ Classification:**
+**🔥 Fire: 138 instances**
+**❌ Not Fire: 106 instances**
 
-122 instances for each region.
+**📝 Attribute Information:**
+📅 Date: (DD/MM/YYYY) - Observations recorded from June to September 2012.
+🌡️ Temp: Temperature at noon (Max Temp in °C): 22 to 42.
+💧 RH: Relative Humidity (%): 21 to 90.
+🌬️ Ws: Wind Speed (km/h): 6 to 29.
+☔ Rain: Total rainfall (mm): 0 to 16.8.
 
-The period from June 2012 to September 2012. The dataset includes 11 attributes and 1 output attribute(class). The 244 instances have been classified into fire(138 classes) and not fire(106 classes) classes.
-
-Attribute Information:
-
-1.Date:(DD/MM/YYYY) Day,month('june' to 'september'),year(2012)Weather data observations
-
-2.Temp:temperature noon(temperature max) in Celsius degrees: 22 to 42
-
-3.RH:relative Humidity in %:21 to 90
-
-4.Ws:Wind speed in km/h:6 to 29
-
-5.Rain:total day in mm:0 to 16.8 FWI Components
-
-6.Fine Fuel Moisture Code (FFMC) index from the FWi system: 
-  28.6 to 92.5
-
-7.Duff Moisture Code(DMC) index from the FWI system:7 to 220.4
-
-8.Drought Code (DC) index from the FWI system:0 to 18.5
-
-9.Initial Speed Index(ISI) index from  the FWI system:0 to 18.5
-
-10.Buildup Index (BUI) index from the FWI system:1.1 to 68
-
-11.Fire Weather Index(FWI) Index: 0 to 31.1
-
-12.Classes:two Classes, namely Fire and Not Fire
+**🔥 Fire Weather Index (FWI) Components:**
+🌱 FFMC: Fine Fuel Moisture Code index: 28.6 to 92.5.
+🍂 DMC: Duff Moisture Code index: 7 to 220.4.
+🌵 DC: Drought Code index: 0 to 18.5.
+🚀 ISI: Initial Spread Index: 0 to 18.5.
+🏗️ BUI: Buildup Index: 1.1 to 68.
+🔥 FWI: Fire Weather Index: 0 to 31.1.
+🔍 Classes:
+🔥 Fire
+❌ Not Fire

@@ -1,0 +1,123 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #f8f9fa;
+    color: #333;
+}
+
+/* Header Section */
+.hero {
+    background: linear-gradient(120deg, #007bff, #66a6ff);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    background: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.hero .btn:hover {
+    background: #e64a19;
+}
+
+/* Dataset Info Section */
+.dataset-info {
+    background: #fff;
+    padding: 40px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.dataset-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.dataset-info p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.dataset-info ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.dataset-info ul li {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+/* Process Section */
+.process {
+    background: #f1f3f4;
+    padding: 40px 20px;
+}
+
+.process h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.step {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.step:hover {
+    transform: scale(1.05);
+}
+
+.step h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ff5722;
+}
+
+.step p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FWI Prediction</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const inputs = document.querySelectorAll("input");
+            const infoBox = document.querySelector(".info-box");
+
+            const infoTexts = {
+                Temperature: "Temperature (°C): 22 to 42 (noon temperature max).",
+                RH: "Relative Humidity (%): 21 to 90.",
+                Ws: "Wind Speed (km/h): 6 to 29.",
+                Rain: "Rain (mm): Total day rain: 0 to 16.8.",
+                FFMC: "Fine Fuel Moisture Code (FFMC): Index: 28.6 to 92.5.",
+                DMC: "Duff Moisture Code (DMC): Index: 7 to 220.4.",
+                ISI: "Initial Speed Index (ISI): Index: 0 to 18.5.",
+                Classes: "Classes: Fire (1) or Not Fire (0).",
+                Region: "Region:Bejaia region (0) or Sidi-Bel Abbes region (1)"
+            };
+
+            inputs.forEach(input => {
+                input.addEventListener("focus", (e) => {
+                    const key = e.target.name;
+                    infoBox.textContent = infoTexts[key] || "No information available.";
+                    infoBox.style.display = "block";
+                });
+                input.addEventListener("blur", () => {
+                    infoBox.style.display = "none";
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <h1>Fire Weather Index Prediction</h1>
+            <form action="{{ url_for('predict_datapoint') }}" method="post">
+                <input type="text" name="Temperature" placeholder="Temperature" required>
+                <input type="text" name="RH" placeholder="RH" required>
+                <input type="text" name="Ws" placeholder="Ws" required>
+                <input type="text" name="Rain" placeholder="Rain" required>
+                <input type="text" name="FFMC" placeholder="FFMC" required>
+                <input type="text" name="DMC" placeholder="DMC" required>
+                <input type="text" name="ISI" placeholder="ISI" required>
+                <input type="text" name="Classes" placeholder="Classes" required>
+                <input type="text" name="Region" placeholder="Region" required>
+                <button type="submit" class="btn">Predict</button>
+            </form>
+            <h2 class="result">{{ results }}</h2>
+        </div>
+        <div class="info-box"></div>
+    </div>
+</body>
+</html>

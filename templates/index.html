@@ -1,1 +1,107 @@
-<h1>Welcome to the Home Page</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algerian Forest Fires Dataset Analysis</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Algerian Forest Fires Dataset</h1>
+            <p>A comprehensive analysis of forest fire patterns in Algeria</p>
+            <a href="#process" class="btn">Learn More</a>
+        </div>
+    </header>
+
+    <section class="dataset-info">
+        <div class="container">
+            <h2>About the Dataset</h2>
+            <p>
+                The dataset includes <strong>244 instances</strong> from two regions in Algeria: 
+                <em>Bejaia Region</em> in the northeast and <em>Sidi Bel-Abbes Region</em> in the northwest. 
+                Collected between <strong>June 2012</strong> and <strong>September 2012</strong>, it classifies data into <strong>fire</strong> (138 instances) 
+                and <strong>not fire</strong> (106 instances) classes. It has <strong>11 attributes</strong> and one output attribute (class).
+            </p>
+            <h3>Attribute Information:</h3>
+            <ul>
+                <li><strong>Date:</strong> Day, month ('June' to 'September'), year (2012)</li>
+                <li><strong>Temp:</strong> Temperature max (22 to 42 °C)</li>
+                <li><strong>RH:</strong> Relative Humidity (21% to 90%)</li>
+                <li><strong>Ws:</strong> Wind Speed (6 to 29 km/h)</li>
+                <li><strong>Rain:</strong> Total rain (0 to 16.8 mm)</li>
+                <li><strong>FWI Components:</strong> FFMC, DMC, DC, ISI, BUI, FWI indices</li>
+                <li><strong>Classes:</strong> Two classes: Fire and Not Fire</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="process" id="process">
+        <div class="container">
+            <h2>Step-by-Step Process</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>1. Data Cleaning</h3>
+                    <p>
+                        Removed null values, fixed column name spacing, and converted necessary features to integer and float types.
+                    </p>
+                </div>
+                <div class="step">
+                    <h3>2. Exploratory Data Analysis (EDA)</h3>
+                    <p>
+                        Dropped date-related columns, encoded classes, and prepared the data for analysis.
+                    </p>
+                </div>
+                <div class="step">
+                    <h3>3. Visualization</h3>
+                    <p>
+                        Created density plots for all features, a pie chart for class distribution, and a heatmap to study correlations. Conducted monthly fire analysis using count plots.
+                    </p>
+                </div>
+                <div class="step">
+                    <h3>4. Train-Test Split</h3>
+                    <p>
+                        Split the features into dependent and independent variables and applied a train-test split using the <strong>scikit-learn</strong> library.
+                    </p>
+                </div>
+                <div class="step">
+                    <h3>5. Feature Selection</h3>
+                    <p>
+                        Selected features based on correlation. Removed multicollinear features to improve model accuracy.
+                    </p>
+                </div>
+                <div class="step">
+                    <h3>6. Feature Scaling</h3>
+                    <p>
+                        Applied standardization using a Standard Scaler. Created box plots to understand the effect of scaling.
+                    </p>
+                </div>
+                <div class="step">
+                    <h3>7. Regression Models</h3>
+                    <p>
+                        Evaluated Linear, Lasso, Ridge, and ElasticNet regression models with cross-validation.
+                    </p>
+                </div>
+                <div class="step">
+                    <h3>8. Ridge Regression</h3>
+                    <p>
+                        Chose Ridge Regression as the best model based on its superior R² score.
+                    </p>
+                </div>
+                <div class="step">
+                    <h3>9. Deployment</h3>
+                    <p>
+                        Created a pickle file for the model, developed a Flask app, and deployed it on AWS Elastic Beanstalk.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2024 Algerian Forest Fires Dataset Analysis</p>
+    </footer>
+</body>
+</html>
